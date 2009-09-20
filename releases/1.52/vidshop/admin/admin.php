@@ -30,11 +30,11 @@
 		switch ($_REQUEST['fct'])
 		{
 		case "edit":
-			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(2) : "";
+			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(3) : "";
 			echo formVideoCats($id);
 			break;
 		case "new":
-			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(2) : "";
+			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(3) : "";
 			echo formVideoCats($id);
 			break;		
 		case "save":
@@ -61,7 +61,7 @@
 			echo formCatsList($videoCatHandler->getObjects($criteria, true), $videoCatHandler);
 			break;
 		default:
-			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(2) : "";
+			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(1) : "";
 	
 			$pgnav = new XoopsPageNav($videocount, $itmppg, $start);
 			$criteria = new Criteria('uid', '0', '>');
@@ -82,7 +82,7 @@
 		switch ($_REQUEST['fct']) {
 		case "save":
 			if ($_REQUEST['description_editor_current'] != $_REQUEST['description_editor'] ) {
-				echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(2) : "";
+				echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(1) : "";
 				echo formVideo($id);
 				xoops_cp_footer();
 				exit(0);
@@ -92,7 +92,7 @@
 			break;
 
 		default:
-			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(2) : "";
+			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(1) : "";
 			echo formVideo($id);
 			break;
 
@@ -103,7 +103,7 @@
 		switch ($_REQUEST['fct']) {
 		case "save":
 			if ($_REQUEST['description_editor_current'] != $_REQUEST['description_editor'] ) {
-				echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(2) : "";
+				echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(4) : "";
 				echo formVideo($id);
 				xoops_cp_footer();
 				exit(0);
@@ -113,7 +113,7 @@
 			break;
 
 		default:
-			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(2) : "";
+			echo function_exists("loadModuleAdminMenu") ? loadModuleAdminMenu(4) : "";
 			echo formVideo($id);
 			break;
 
