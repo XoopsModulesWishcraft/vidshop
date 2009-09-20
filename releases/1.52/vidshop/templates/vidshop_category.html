@@ -1,0 +1,23 @@
+<div style="clear:both; height:10px;">&nbsp;</div>
+<a href="<{$xoops_url}>/modules/vidshop/scoop.php?op=addtocart&cid=<{$cid}>&uri=<{$xoops_url}>/modules/vidshop/?op=cats&amp;cid=<{$cid}>"><img align="left" border="0" src="<{$xoops_url}>/modules/vidshop/images/addtocart.png"></a>
+<{foreach from=$videos item=video}>
+    <{assign var='newloop' value='1'}>
+    <{if $column==0 && $newloop == 1}>
+    <div style="clear:both">    
+    	<div style="text-align:center; float:left; width:50%;"><a href="<{$xoops_url}>/modules/vidshop/index.php?op=view&id=<{$video.id}>">
+        	<{if $video.image}><img src="<{$xoops_url}>/uploads/<{$video.image}>" width="140px" border="0"><br/><{/if}>
+            <strong><{$video.name}></strong>
+        </a></div>
+        <{assign var='column' value='1'}>
+        <{assign var='newloop' value='0'}>
+    <{/if}>
+    <{if $column==1 && $newloop == 1}>
+    	<div style="text-align:center; float:right; width:50%;"><a href="<{$xoops_url}>/modules/vidshop/index.php?op=view&cid=<{$video.id}>">
+        	<{if $video.image}><img src="<{$xoops_url}>/uploads/<{$video.image}>" width="140px" border="0"><br/><{/if}>
+            <strong><{$video.name}></strong>
+        </a></div>
+    </div>
+        <{assign var='column' value='0'}>
+        <{assign var='newloop' value='0'}>
+    <{/if}>    
+<{/foreach}>
