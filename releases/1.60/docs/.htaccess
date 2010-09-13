@@ -1,0 +1,12 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^spiders/(.*?),(.*?),(.*?).html$ modules/spiders/index.php?op=$1&start=$2&num=$3
+RewriteRule ^spiders(.*?)$ modules/spiders$1
+
+
+
+
+
