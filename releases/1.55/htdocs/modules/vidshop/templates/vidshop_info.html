@@ -1,0 +1,20 @@
+<div style="clear:both; height:10px;">&nbsp;</div>
+<div style="text-align:center; display:block; clear:both;"><{$video.embedded}></div>
+<h2>Description</h2>
+<div style="text-align:justify; display:block; clear:both; height:66px;"><a href="<{$xoops_url}>/modules/vidshop/scoop.php?op=addtocart&id=<{$video.id}>"><img align="left" border="0" src="<{$xoops_url}>/modules/vidshop/images/addtocart.png" style="clear:both;"></a></div><div><{$video.description}></div>
+<div style="text-align:left; display:block; clear:both;">Price: <{$video.price}> <{$video.curreny}></div>
+<div style="text-align:left; display:block; clear:both;"><{include file="db:tag_bar.html"}></div>
+<div style="clear:both; height:10px;">&nbsp;</div>
+<div style="text-align: center; padding: 3px; margin: 3px;">
+  <{$commentsnav}>
+  <{$lang_notice}>
+</div>
+<div style="margin: 3px; padding: 3px;">
+<{if $comment_mode == "flat"}>
+  <{include file="db:system_comments_flat.html"}>
+<{elseif $comment_mode == "thread"}>
+  <{include file="db:system_comments_thread.html"}>
+<{elseif $comment_mode == "nest"}>
+  <{include file="db:system_comments_nest.html"}>
+<{/if}>
+</div>
