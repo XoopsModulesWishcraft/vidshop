@@ -32,7 +32,7 @@ CREATE TABLE `vidshop_transactions` (
   `payer_email` varchar(127) NOT NULL default '',
   `payer_status` varchar(15) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE `vidshop_translog` (
@@ -41,7 +41,7 @@ CREATE TABLE `vidshop_translog` (
   `payment_date` datetime NOT NULL default '0000-00-00 00:00:00',
   `logentry` text NOT NULL,
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `vidshop_video_category` (                    
 	`cid` INT(13) UNSIGNED NOT NULL AUTO_INCREMENT,  
