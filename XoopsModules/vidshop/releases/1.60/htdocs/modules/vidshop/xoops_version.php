@@ -15,7 +15,7 @@
  * @since           2.3.0
  * @author          Jan Pedersen
  * @author          Taiwen Jiang <phppp@users.sourceforge.net>
- * @version         $Id: xoops_version.php 2022 2008-08-31 02:07:17Z phppp $
+ * @version         $Id$
  */
  
 /**
